@@ -1,6 +1,7 @@
 ---
 title: Membuat Saklar Pintar Menggunakan ESP8266
 draft: false
+date: 2023-09-03
 tags:
   - Tutorials
 ---
