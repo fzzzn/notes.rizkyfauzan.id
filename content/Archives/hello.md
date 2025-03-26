@@ -2,9 +2,8 @@
 title: Hello!
 draft: false
 tags:
-  - archive
+  - Archives
 ---
-
 Ini adalah website baru untuk menggantikan website sebelumnya yang menggunakan [Hugo](https://gohugo.io/). Karena website sebelumnya bermasalah dengan SEO dan sulit untuk di index Google, jadi saya memutuskan untuk menggantinya dengan [Ghost](https://ghost.org/).
 
 Website ini nantinya akan diisi dengan berbagai tulisan yang berkaitan dengan jaringan, pemrograman, dan IoT. Serta berbagai project yang sedang saya kerjakan.
