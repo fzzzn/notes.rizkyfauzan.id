@@ -1,5 +1,5 @@
 ---
-title: Membuat Saklar Pintar Menggunakan ESP8266
+title: Membuat Saklar Pintar Menggunakan ESP8266 dan Sinric Pro
 draft: false
 date: 2023-09-03
 tags:
