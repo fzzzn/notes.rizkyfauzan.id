@@ -38,6 +38,7 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
+    Component.Explorer(),
     Component.DesktopOnly(
       Component.Flex({
         direction: "column",
