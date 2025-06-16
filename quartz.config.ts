@@ -1,4 +1,4 @@
-import { QuartzConfig } from "./quartz/cfg"
+import type { QuartzConfig } from "./quartz/cfg"
 import * as Plugin from "./quartz/plugins"
 
 /**
@@ -13,7 +13,9 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "umami",
+      websiteId: "7b7f9c9f-7fa5-4424-8f74-53e760b5b204",
+      host: "https://u.zxn.my.id",
     },
     locale: "en-US",
     baseUrl: "rizkyfauzan.id",
