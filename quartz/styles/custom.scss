@@ -1,6 +1,9 @@
 @use "./base.scss";
+@use "../styles/variables.scss" as *;
 
-// put your custom CSS here!
-.no-meta .content-meta {
-  display: none !important;
+// Hide explorer on desktop, keep mobile functionality
+@media all and not ($mobile) {
+  .explorer {
+    display: none !important;
+  }
 }
