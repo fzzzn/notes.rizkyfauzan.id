@@ -16,4 +16,6 @@ I am eager to take on complex networking challenges and contribute to innovative
 - [Achievements](/achievements)
 - [Certificates](/certificates)
 - [Contact](/contact)
+- [Now](/now)
+- [Resume](/resume.pdf)
 
