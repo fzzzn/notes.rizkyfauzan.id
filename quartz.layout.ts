@@ -8,11 +8,11 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "Links": "https://links.rizkyfauzan.id",
+      Links: "https://links.rizkyfauzan.id",
       GitHub: "https://github.com/fzzzn/rizkyfauzan.id",
       LinkedIn: "https://linkedin.com/in/rizky-fauzan-hanif",
       "Status Page": "https://status.rizkyfauzan.id",
-      "NMS": "https://nms.rizkyfauzan.id",
+      NMS: "https://nms.rizkyfauzan.id",
     },
   }),
 }
@@ -34,7 +34,9 @@ export const defaultContentPageLayout: PageLayout = {
         page.fileData.slug !== "index" &&
         page.fileData.slug !== "achievements" &&
         page.fileData.slug !== "certificates" &&
-        page.fileData.slug !== "contact"
+        page.fileData.slug !== "contact" &&
+        page.fileData.slug !== "resume" &&
+        page.fileData.slug !== "now"
     }),
     Component.TagList(),
   ],
@@ -57,7 +59,7 @@ export const defaultContentPageLayout: PageLayout = {
         components: [
           {
             Component: Component.RecentNotes({
-              limit: 3,
+              limit: 10,
               title: "ls -lah /",
               filter: (f) => Boolean(f.slug && !f.slug.includes("/") && f.slug !== "index"),
               sort: (a, b) => {
