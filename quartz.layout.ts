@@ -115,10 +115,24 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
+    Component.Explorer(),
     Component.DesktopOnly(
       Component.Flex({
         direction: "column",
         components: [
+          {
+            Component: Component.RecentNotes({
+              limit: 10,
+              title: "ls -lah /",
+              filter: (f) => Boolean(f.slug && !f.slug.includes("/") && f.slug !== "index"),
+              sort: (a, b) => {
+                const titleA = a.frontmatter?.title || a.slug || ""
+                const titleB = b.frontmatter?.title || b.slug || ""
+                return titleA.localeCompare(titleB)
+              },
+            }),
+            align: "start",
+          },
           {
             Component: Component.RecentNotes({
               limit: 3,
