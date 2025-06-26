@@ -47,7 +47,7 @@ export const defaultContentPageLayout: PageLayout = {
       components: [
         {
           Component: Component.Search(),
-          grow: true,
+          grow: false,
         },
         { Component: Component.Darkmode() },
       ],
@@ -110,7 +110,7 @@ export const defaultListPageLayout: PageLayout = {
       components: [
         {
           Component: Component.Search(),
-          grow: true,
+          grow: false,
         },
         { Component: Component.Darkmode() },
       ],
