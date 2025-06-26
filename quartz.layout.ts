@@ -8,9 +8,11 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      "Links": "https://links.rizkyfauzan.id",
       GitHub: "https://github.com/fzzzn/rizkyfauzan.id",
       LinkedIn: "https://linkedin.com/in/rizky-fauzan-hanif",
-      Status: "https://status.rizkyfauzan.id",
+      "Status Page": "https://status.rizkyfauzan.id",
+      "NMS": "https://nms.rizkyfauzan.id",
     },
   }),
 }
@@ -22,8 +24,18 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
+    Component.ConditionalRender({
+      component: Component.ArticleTitle(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) =>
+        page.fileData.slug !== "index" &&
+        page.fileData.slug !== "achievements" &&
+        page.fileData.slug !== "certificates" &&
+        page.fileData.slug !== "contact"
+    }),
     Component.TagList(),
   ],
   left: [
@@ -46,6 +58,19 @@ export const defaultContentPageLayout: PageLayout = {
           {
             Component: Component.RecentNotes({
               limit: 3,
+              title: "ls -lah /",
+              filter: (f) => Boolean(f.slug && !f.slug.includes("/") && f.slug !== "index"),
+              sort: (a, b) => {
+                const titleA = a.frontmatter?.title || a.slug || ""
+                const titleB = b.frontmatter?.title || b.slug || ""
+                return titleA.localeCompare(titleB)
+              },
+            }),
+            align: "start",
+          },
+          {
+            Component: Component.RecentNotes({
+              limit: 3,
               title: "ls -lah /var/tutorials",
               filter: (f) => f.slug?.startsWith("tutorials") ?? false,
             }),
@@ -65,7 +90,10 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
+    Component.ConditionalRender({
+      component: Component.DesktopOnly(Component.TableOfContents()),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.Backlinks(),
   ],
 }
