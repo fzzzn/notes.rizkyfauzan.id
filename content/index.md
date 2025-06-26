@@ -1,9 +1,7 @@
 ---
 title: Home
-cssclasses: no-meta
 ---
-
-# Hi, I'm Rizky Fauzan Hanif
+## Hi, I'm Rizky Fauzan Hanif
 
 A passionate student at SMKN 2 Depok Sleman, dedicated to mastering networking, DevOps and cybersecurity. I am fascinated by the power of networking technologies, from tunneling to building secure infrastructures.
 
