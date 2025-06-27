@@ -17,7 +17,7 @@ const config: QuartzConfig = {
       websiteId: "7b7f9c9f-7fa5-4424-8f74-53e760b5b204",
       host: "https://u.zxn.my.id",
     },
-    locale: "id-ID",
+    locale: "en-US",
     baseUrl: "notes.rizkyfauzan.id",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
