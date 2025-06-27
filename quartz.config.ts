@@ -8,8 +8,8 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "rizkyfauzan.id",
-    pageTitleSuffix: " | Rizky Fauzan Hanif",
+    pageTitle: "📚 Notes",
+    pageTitleSuffix: " | Fauzan's Notes",
     enableSPA: true,
     enablePopovers: true,
     analytics: {
@@ -17,8 +17,8 @@ const config: QuartzConfig = {
       websiteId: "7b7f9c9f-7fa5-4424-8f74-53e760b5b204",
       host: "https://u.zxn.my.id",
     },
-    locale: "en-US",
-    baseUrl: "rizkyfauzan.id",
+    locale: "id-ID",
+    baseUrl: "notes.rizkyfauzan.id",
     ignorePatterns: ["private", "templates", ".obsidian"],
     defaultDateType: "created",
     theme: {
