@@ -4,4 +4,4 @@ title: Now
 
 WIP
 
-[Back to Home](/)
+[🏠 Back to Home](/)
