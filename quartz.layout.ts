@@ -8,6 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
+      "Personal Site": "https://rizkyfauzan.id",
       Links: "https://links.rizkyfauzan.id",
       GitHub: "https://github.com/fzzzn/rizkyfauzan.id",
       LinkedIn: "https://linkedin.com/in/rizky-fauzan-hanif",
@@ -32,10 +33,7 @@ export const defaultContentPageLayout: PageLayout = {
       component: Component.ContentMeta(),
       condition: (page) =>
         page.fileData.slug !== "index" &&
-        page.fileData.slug !== "achievements" &&
-        page.fileData.slug !== "certificates" &&
         page.fileData.slug !== "contact" &&
-        page.fileData.slug !== "resume" &&
         page.fileData.slug !== "now"
     }),
     Component.TagList(),
