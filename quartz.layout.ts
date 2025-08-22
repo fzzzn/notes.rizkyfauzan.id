@@ -8,10 +8,10 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "Personal Site": "https://rizkyfauzan.id",
+      "Main Website": "https://rizkyfauzan.id",
       GitHub: "https://github.com/fzzzn/rizkyfauzan.id",
       LinkedIn: "https://linkedin.com/in/rizky-fauzan-hanif",
-      "Status Page": "https://status.rizkyfauzan.id",
+      Status: "https://status.rizkyfauzan.id",
       NMS: "https://nms.rizkyfauzan.id",
     },
   }),
@@ -22,18 +22,22 @@ export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
-      condition: (page) => page.fileData.slug !== "index",
+      condition: (page) =>
+        page.fileData.slug !== "index" &&
+        page.fileData.slug !== "contact" &&
+        page.fileData.slug !== "now",
     }),
-    Component.ConditionalRender({
-      component: Component.ArticleTitle(),
-      condition: (page) => page.fileData.slug !== "index",
-    }),
+    Component.ArticleTitle(),
+    // Component.ConditionalRender({
+    //   component: Component.ArticleTitle(),
+    //   condition: (page) => page.fileData.slug !== "index",
+    // }),
     Component.ConditionalRender({
       component: Component.ContentMeta(),
       condition: (page) =>
         page.fileData.slug !== "index" &&
         page.fileData.slug !== "contact" &&
-        page.fileData.slug !== "now"
+        page.fileData.slug !== "now",
     }),
     Component.TagList(),
   ],
@@ -44,20 +48,21 @@ export const defaultContentPageLayout: PageLayout = {
       components: [
         {
           Component: Component.Search(),
-          grow: false,
+          grow: true,
         },
         { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer(), // Hidden on Desktop
     Component.DesktopOnly(
       Component.Flex({
         direction: "column",
         components: [
           {
             Component: Component.RecentNotes({
-              limit: 10,
-              title: "ls -lah /",
+              limit: 3,
+              title: "ls -lah /home/fauzan/",
               filter: (f) => Boolean(f.slug && !f.slug.includes("/") && f.slug !== "index"),
               sort: (a, b) => {
                 const titleA = a.frontmatter?.title || a.slug || ""
@@ -70,15 +75,15 @@ export const defaultContentPageLayout: PageLayout = {
           {
             Component: Component.RecentNotes({
               limit: 3,
-              title: "ls -lah /var/tutorials",
-              filter: (f) => f.slug?.startsWith("tutorials") ?? false,
+              title: "ls -lah /var/notes/",
+              filter: (f) => f.slug?.startsWith("notes") ?? false,
             }),
             align: "start",
           },
           {
             Component: Component.RecentNotes({
               limit: 3,
-              title: "ls -lah /var/log/public",
+              title: "ls -lah /var/log/fauzan/",
               filter: (f) => f.slug?.startsWith("log") ?? false,
             }),
             align: "start",
@@ -91,7 +96,10 @@ export const defaultContentPageLayout: PageLayout = {
     Component.Graph(),
     Component.ConditionalRender({
       component: Component.DesktopOnly(Component.TableOfContents()),
-      condition: (page) => page.fileData.slug !== "index",
+      condition: (page) =>
+        page.fileData.slug !== "index" &&
+        page.fileData.slug !== "contact" &&
+        page.fileData.slug !== "now",
     }),
     Component.Backlinks(),
   ],
@@ -107,9 +115,10 @@ export const defaultListPageLayout: PageLayout = {
       components: [
         {
           Component: Component.Search(),
-          grow: false,
+          grow: true,
         },
         { Component: Component.Darkmode() },
+        { Component: Component.ReaderMode() },
       ],
     }),
     Component.Explorer(),
@@ -120,7 +129,7 @@ export const defaultListPageLayout: PageLayout = {
           {
             Component: Component.RecentNotes({
               limit: 10,
-              title: "ls -lah /",
+              title: "ls -lah /home/fauzan/",
               filter: (f) => Boolean(f.slug && !f.slug.includes("/") && f.slug !== "index"),
               sort: (a, b) => {
                 const titleA = a.frontmatter?.title || a.slug || ""
@@ -133,15 +142,15 @@ export const defaultListPageLayout: PageLayout = {
           {
             Component: Component.RecentNotes({
               limit: 3,
-              title: "ls -lah /var/tutorials",
-              filter: (f) => f.slug?.startsWith("tutorials") ?? false,
+              title: "ls -lah /var/notes/",
+              filter: (f) => f.slug?.startsWith("notes") ?? false,
             }),
             align: "start",
           },
           {
             Component: Component.RecentNotes({
               limit: 3,
-              title: "ls -lah /var/log/public",
+              title: "ls -lah /var/log/fauzan/",
               filter: (f) => f.slug?.startsWith("log") ?? false,
             }),
             align: "start",
