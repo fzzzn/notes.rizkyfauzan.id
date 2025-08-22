@@ -1,8 +1,6 @@
 ---
-title: Welcome
+title: Welcome to My Notes / Digital Garden
 ---
-
-## Welcome to My Digital Garden
 
 Pelajari lebih lanjut tentang [Digital Garden](https://maggieappleton.com/garden-history)
 
