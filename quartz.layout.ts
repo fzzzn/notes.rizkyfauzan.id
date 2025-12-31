@@ -8,7 +8,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      "Main Website": "https://rizkyfauzan.id",
+      Website: "https://rizkyfauzan.id",
       GitHub: "https://github.com/fzzzn/rizkyfauzan.id",
       LinkedIn: "https://linkedin.com/in/rizky-fauzan-hanif",
       Status: "https://status.rizkyfauzan.id",
@@ -51,7 +51,7 @@ export const defaultContentPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        // { Component: Component.ReaderMode() },
       ],
     }),
     Component.Explorer(), // Hidden on Desktop
@@ -118,7 +118,7 @@ export const defaultListPageLayout: PageLayout = {
           grow: true,
         },
         { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
+        // { Component: Component.ReaderMode() },
       ],
     }),
     Component.Explorer(),
