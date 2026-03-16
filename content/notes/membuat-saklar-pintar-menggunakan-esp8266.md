@@ -2,6 +2,7 @@
 title: Membuat Saklar Pintar Menggunakan ESP8266 dan Sinric Pro
 date: 2023-09-03
 ---
+
 Tulisan ini dibuat untuk laporan ujian praktek mata pelajaran IPS dan IPA.
 
 Saya membuat sebuah saklar pintar berbasis [_Internet of Things (IoT)_](https://en.wikipedia.org/wiki/Internet_of_things). Saklar ini dapat dikontrol dari jarak jauh menggunakan aplikasi atau website dengan bantuan koneksi internet.
@@ -304,6 +305,6 @@ Tunggu proses compile selesai dan selesai ter-upload
 
 Coba untuk menghidupkan dan mematikan switch, lampu relay akan mati saat off dan akan hidup saat on.
 
-![Demo Video](https://youtu.be/ybBt2E1YVn4)
+![Demo Video](https://youtu.be/ybBt2E1YVn4?si=8TQfeXzQiPd5eiS0)
 
 [🏠 Back to Home](/)
