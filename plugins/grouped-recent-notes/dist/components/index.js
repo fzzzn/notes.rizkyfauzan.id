@@ -26,11 +26,6 @@ export function GroupedRecentNotes(userOpts) {
       return page;
     };
 
-    const closeMenu = () => {
-      const el = document.getElementById(toggleId);
-      if (el) el.checked = false;
-    };
-
     const filterByPrefix = (prefix) => {
       return allFiles
         .filter((p) => !p.unlisted)
@@ -76,8 +71,7 @@ export function GroupedRecentNotes(userOpts) {
                     h('h3', null,
                       h('a', {
                         href: resolveRelative(slug, page.slug),
-                        class: 'internal',
-                        onClick: closeMenu
+                        class: 'internal'
                       }, pageTitle)
                     )
                   ),
@@ -91,8 +85,7 @@ export function GroupedRecentNotes(userOpts) {
                       h('li', { key: tag },
                         h('a', {
                           class: 'internal tag-link',
-                          href: resolveRelative(slug, `tags/${tag}`),
-                          onClick: closeMenu
+                          href: resolveRelative(slug, `tags/${tag}`)
                         }, tag)
                       )
                     )
@@ -102,7 +95,7 @@ export function GroupedRecentNotes(userOpts) {
             })
           ),
           remaining > 0 && h('p', { class: 'more-link' },
-            h('a', { href: resolveRelative(slug, group.filterPrefix || ''), class: 'internal', onClick: closeMenu },
+            h('a', { href: resolveRelative(slug, group.filterPrefix || ''), class: 'internal' },
               `+ ${remaining} more`
             )
           )
@@ -290,6 +283,16 @@ export function GroupedRecentNotes(userOpts) {
 .grouped-recent-notes .more-link a:hover {
   text-decoration: underline;
 }
+  `;
+
+  Component.afterDOMLoaded = `
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('.grn-panel a.internal');
+      if (link) {
+        var input = link.closest('.grouped-recent-notes').querySelector('.grn-toggle-input');
+        if (input) input.checked = false;
+      }
+    });
   `;
 
   return Component;
