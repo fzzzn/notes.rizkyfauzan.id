@@ -34,7 +34,6 @@ export function GroupedRecentNotes(userOpts) {
           if (p.slug === 'tags' || p.slug === 'tags/index' || p.slug.startsWith('tags/')) return false;
           if (isFolderPath(p.slug)) return false;
           if (p.slug === '404') return false;
-          if (p.slug === slug) return false;
           if (prefix === '') {
             return !p.slug.includes('/');
           }
