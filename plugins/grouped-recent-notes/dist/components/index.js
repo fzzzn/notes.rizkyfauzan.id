@@ -26,6 +26,11 @@ export function GroupedRecentNotes(userOpts) {
       return page;
     };
 
+    const closeMenu = () => {
+      const el = document.getElementById(toggleId);
+      if (el) el.checked = false;
+    };
+
     const filterByPrefix = (prefix) => {
       return allFiles
         .filter((p) => !p.unlisted)
@@ -71,7 +76,8 @@ export function GroupedRecentNotes(userOpts) {
                     h('h3', null,
                       h('a', {
                         href: resolveRelative(slug, page.slug),
-                        class: 'internal'
+                        class: 'internal',
+                        onClick: closeMenu
                       }, pageTitle)
                     )
                   ),
@@ -85,7 +91,8 @@ export function GroupedRecentNotes(userOpts) {
                       h('li', { key: tag },
                         h('a', {
                           class: 'internal tag-link',
-                          href: resolveRelative(slug, `tags/${tag}`)
+                          href: resolveRelative(slug, `tags/${tag}`),
+                          onClick: closeMenu
                         }, tag)
                       )
                     )
@@ -95,7 +102,7 @@ export function GroupedRecentNotes(userOpts) {
             })
           ),
           remaining > 0 && h('p', { class: 'more-link' },
-            h('a', { href: resolveRelative(slug, group.filterPrefix || ''), class: 'internal' },
+            h('a', { href: resolveRelative(slug, group.filterPrefix || ''), class: 'internal', onClick: closeMenu },
               `+ ${remaining} more`
             )
           )
