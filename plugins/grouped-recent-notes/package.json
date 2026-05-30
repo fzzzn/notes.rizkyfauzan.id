@@ -1,0 +1,35 @@
+{
+  "name": "grouped-recent-notes",
+  "version": "1.0.0",
+  "description": "Recent Notes component with multiple groups by folder prefix",
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js"
+    },
+    "./components": {
+      "import": "./dist/components/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "grouped-recent-notes",
+    "displayName": "Grouped Recent Notes",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "defaultOrder": 50,
+    "defaultEnabled": false,
+    "components": {
+      "GroupedRecentNotes": {
+        "displayName": "Grouped Recent Notes",
+        "defaultPosition": "left",
+        "defaultPriority": 60
+      }
+    }
+  }
+}

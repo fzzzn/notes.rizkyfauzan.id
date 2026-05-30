@@ -1,11 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: notes.rizkyfauzan.id
-  pageTitleSuffix: ""
+  pageTitle: "Fauzan's Notes"
+  pageTitleSuffix: " | Fauzan's Notes"
   enableSPA: true
   enablePopovers: true
   analytics:
-    provider: plausible
+    provider: umami
+    host: https://u.zxn.my.id
+    websiteId: 7b7f9c9f-7fa5-4424-8f74-53e760b5b204
   locale: en-US
   baseUrl: notes.rizkyfauzan.id
   ignorePatterns:
@@ -26,18 +28,18 @@ configuration:
         gray: "#b8b8b8"
         darkgray: "#4e4e4e"
         dark: "#2b2b2b"
-        secondary: "#284b63"
+        secondary: "#2b2b2b"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#161618"
+        light: "#000000"
         lightgray: "#393639"
         gray: "#646464"
-        darkgray: "#d4d4d4"
+        darkgray: "#a1a1a6"
         dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
+        secondary: "#f5f5f7"
+        tertiary: "#a1a1a1"
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#b3aa0288"
 plugins:
@@ -96,7 +98,7 @@ plugins:
     enabled: false
     order: 91
   - source: github:quartz-community/roam
-    enabled: false
+    enabled: true
     order: 92
   - source: github:quartz-community/remove-draft
     enabled: true
@@ -141,7 +143,7 @@ plugins:
   - source: github:quartz-community/tag-page
     enabled: true
   - source: github:quartz-community/explorer
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 50
@@ -174,7 +176,7 @@ plugins:
       position: beforeBody
       priority: 20
   - source: github:quartz-community/tag-list
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
@@ -190,7 +192,7 @@ plugins:
       priority: 30
       group: toolbar
   - source: github:quartz-community/reader-mode
-    enabled: true
+    enabled: false
     layout:
       position: left
       priority: 35
@@ -213,10 +215,30 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
-  - source: github:quartz-community/recent-notes
-    enabled: false
+        Website: https://rizkyfauzan.id
+        GitHub: https://github.com/fzzzn/rizkyfauzan.id
+        LinkedIn: https://linkedin.com/in/rizky-fauzan-hanif
+        Status: https://status.rizkyfauzan.id
+        NMS: https://nms.rizkyfauzan.id
+  - source: ./plugins/grouped-recent-notes
+    enabled: true
+    options:
+      groups:
+        - title: "ls -lah /home/fauzan/"
+          filterPrefix: ""
+          limit: 5
+          showTags: true
+        - title: "ls -lah /var/notes/"
+          filterPrefix: "notes/"
+          limit: 3
+          showTags: true
+        - title: "ls -lah /var/log/fauzan/"
+          filterPrefix: "log/"
+          limit: 3
+          showTags: true
+    layout:
+      position: left
+      priority: 60
   - source: github:quartz-community/spacer
     enabled: true
     options: {}
