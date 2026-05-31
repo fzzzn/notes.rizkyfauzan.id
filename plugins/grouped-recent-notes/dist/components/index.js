@@ -285,7 +285,6 @@ export function GroupedRecentNotes(userOpts) {
 }
 .grn-toggle-more:hover {
   color: var(--tertiary);
-  text-decoration: underline;
 }
   `;
 
