@@ -88,7 +88,7 @@ a {
   color: var(--secondary);
 
   &:hover {
-    color: var(--tertiary);
+    color: var(--link-hover, var(--tertiary));
   }
 
   &.internal {
