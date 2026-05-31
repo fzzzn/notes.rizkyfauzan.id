@@ -219,7 +219,6 @@ plugins:
         GitHub: https://github.com/fzzzn/rizkyfauzan.id
         LinkedIn: https://linkedin.com/in/rizky-fauzan-hanif
         Status: https://status.rizkyfauzan.id
-        NMS: https://nms.rizkyfauzan.id
   - source: ./plugins/grouped-recent-notes
     enabled: true
     options:
