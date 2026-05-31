@@ -306,5 +306,3 @@ Tunggu proses compile selesai dan selesai ter-upload
 Coba untuk menghidupkan dan mematikan switch, lampu relay akan mati saat off dan akan hidup saat on.
 
 ![Demo Video](https://youtu.be/ybBt2E1YVn4?si=8TQfeXzQiPd5eiS0)
-
-[🏠 Back to Home](/)

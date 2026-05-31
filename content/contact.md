@@ -9,5 +9,3 @@ title: Contact
 - Instagram: [@rizkyfauzanid](https://www.instagram.com/rizkyfauzanid)
 - Discord: [fzzzn_](https://discordapp.com/users/536379400686665778)
 - Telegram: [@rizkyfauzanid](https://t.me/rizkyfauzanid)
-
-[🏠 Back to Home](/)
