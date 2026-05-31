@@ -253,12 +253,12 @@ export function GroupedRecentNotes(userOpts) {
 /* === Light mode: hover biru muda === */
 .theme-light .grouped-recent-notes .desc h3 a:hover,
 .theme-light .grn-toggle-more:hover {
-  color: #4a90d9 !important;
+  color: var(--link-hover) !important;
 }
 /* === Dark mode: hover tertiary === */
 .theme-dark .grouped-recent-notes .desc h3 a:hover,
 .theme-dark .grn-toggle-more:hover {
-  color: var(--tertiary);
+  color: var(--link-hover);
 }
 .grouped-recent-notes .meta {
   margin: 0.15rem 0 0 0;
