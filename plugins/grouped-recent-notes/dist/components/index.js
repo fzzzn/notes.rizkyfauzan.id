@@ -279,23 +279,12 @@ export function GroupedRecentNotes(userOpts) {
 /* === "See N more" expandable toggle === */
 /* === "See N more →" link === */
 .grn-toggle-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.2rem;
-  padding: 0.2rem 0.65rem;
+  color: var(--secondary);
+  text-decoration: none;
   font-size: 0.88rem;
-  font-weight: 500;
-  color: var(--light);
-  background: var(--dark);
-  border: 1px solid var(--gray);
-  border-radius: 4px;
-  text-decoration: none !important;
-  transition: background 150ms, color 150ms, border-color 150ms;
-  user-select: none;
 }
 .grn-toggle-more:hover {
-  background: #333;
-  border-color: var(--lightgray);
+  text-decoration: underline;
 }
   `;
 
