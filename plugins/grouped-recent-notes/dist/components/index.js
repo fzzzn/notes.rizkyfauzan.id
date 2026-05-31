@@ -284,6 +284,7 @@ export function GroupedRecentNotes(userOpts) {
   font-size: 0.88rem;
 }
 .grn-toggle-more:hover {
+  color: var(--dark);
   text-decoration: underline;
 }
   `;
