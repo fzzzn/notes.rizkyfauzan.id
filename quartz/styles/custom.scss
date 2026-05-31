@@ -9,3 +9,9 @@
 .theme-dark {
   --link-hover: #4a90d9;
 }
+
+/* Table of Contents hover effect */
+.toc .toc-content > li > a:hover {
+  opacity: 1;
+  color: var(--link-hover);
+}
