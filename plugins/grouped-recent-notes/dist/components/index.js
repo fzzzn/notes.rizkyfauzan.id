@@ -251,7 +251,7 @@ export function GroupedRecentNotes(userOpts) {
   line-height: 1.4;
 }
 .grouped-recent-notes .desc h3 a:hover {
-  color: var(--secondary);
+  color: var(--tertiary);
 }
 .grouped-recent-notes .meta {
   margin: 0.15rem 0 0 0;
