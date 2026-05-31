@@ -250,6 +250,11 @@ export function GroupedRecentNotes(userOpts) {
   color: var(--dark);
   line-height: 1.4;
 }
+.grouped-recent-notes .desc h3 a.internal {
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
 /* === Light mode: hover biru muda === */
 .theme-light .grouped-recent-notes .desc h3 a:hover,
 .theme-light .grn-toggle-more:hover {
