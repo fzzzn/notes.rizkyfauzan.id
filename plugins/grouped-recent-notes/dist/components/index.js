@@ -93,43 +93,13 @@ export function GroupedRecentNotes(userOpts) {
                 )
               );
             }),
-            remaining > 0 && pages.slice(limit).map((page) => {
-              const pageTitle = page.frontmatter?.title || 'Untitled';
-              const tags = page.frontmatter?.tags || [];
-              const date = getDate(withDate(page));
-              const hideDate = page.slug === 'contact' || page.slug === 'now';
-
-              return h('li', { class: 'recent-li grn-extra-item', key: page.slug },
-                h('div', { class: 'section' },
-                  h('div', { class: 'desc' },
-                    h('h3', null,
-                      h('a', {
-                        href: resolveRelative(slug, page.slug),
-                        class: 'internal'
-                      }, pageTitle)
-                    )
-                  ),
-                  date && !hideDate && h('p', { class: 'meta' },
-                    h('time', { datetime: date.toISOString() },
-                      formatDate(date, locale)
-                    )
-                  ),
-                  showTags && tags.length > 0 && h('ul', { class: 'tags' },
-                    tags.map((tag) =>
-                      h('li', { key: tag },
-                        h('a', {
-                          class: 'internal tag-link',
-                          href: resolveRelative(slug, `tags/${tag}`)
-                        }, tag)
-                      )
-                    )
-                  )
-                )
-              );
-            })
+            remaining > 0 // remaining items not rendered in sidebar; shown on filter page
           ),
           remaining > 0 && h('p', { class: 'more-link' },
-            h('a', { href: '#', class: 'grn-toggle-more', 'data-remaining': remaining },
+            h('a', {
+              href: resolveRelative(slug, group.filterPrefix || ''),
+              class: 'grn-toggle-more'
+            },
               `See ${remaining} more \u2192`
             )
           )
@@ -307,30 +277,25 @@ export function GroupedRecentNotes(userOpts) {
   text-decoration: none;
 }
 /* === "See N more" expandable toggle === */
-.grn-extra-item {
-  display: none;
-}
-.recent-group.grn-expanded .grn-extra-item {
-  display: block;
-}
+/* === "See N more →" link === */
 .grn-toggle-more {
-  cursor: pointer;
-  color: var(--dark);
-  background: var(--light);
-  border: 1px solid var(--gray);
-  border-radius: 4px;
-  padding: 0.25rem 0.6rem;
-  font-size: 0.85rem;
-  text-decoration: none !important;
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  transition: background 150ms, color 150ms;
+  gap: 0.2rem;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--light);
+  background: var(--dark);
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  text-decoration: none !important;
+  transition: background 150ms, color 150ms, border-color 150ms;
   user-select: none;
 }
 .grn-toggle-more:hover {
-  background: var(--dark);
-  color: var(--light);
+  background: #333;
+  border-color: var(--lightgray);
 }
   `;
 
@@ -340,22 +305,6 @@ export function GroupedRecentNotes(userOpts) {
       if (link) {
         var input = link.closest('.grouped-recent-notes').querySelector('.grn-toggle-input');
         if (input) input.checked = false;
-      }
-      // Handle "See N more" expand/collapse
-      var toggle = e.target.closest('.grn-toggle-more');
-      if (toggle) {
-        e.preventDefault();
-        var group = toggle.closest('.recent-group');
-        if (group) {
-          group.classList.toggle('grn-expanded');
-          var isExpanded = group.classList.contains('grn-expanded');
-          var remaining = toggle.getAttribute('data-remaining');
-          if (isExpanded) {
-            toggle.innerHTML = 'Show less';
-          } else {
-            toggle.innerHTML = 'See ' + remaining + ' more →';
-          }
-        }
       }
     });
   `;
