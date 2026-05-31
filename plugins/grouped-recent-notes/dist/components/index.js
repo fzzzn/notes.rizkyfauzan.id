@@ -250,7 +250,14 @@ export function GroupedRecentNotes(userOpts) {
   color: var(--dark);
   line-height: 1.4;
 }
-.grouped-recent-notes .desc h3 a:hover {
+/* === Light mode: hover biru muda === */
+.theme-light .grouped-recent-notes .desc h3 a:hover,
+.theme-light .grn-toggle-more:hover {
+  color: #4a90d9 !important;
+}
+/* === Dark mode: hover tertiary === */
+.theme-dark .grouped-recent-notes .desc h3 a:hover,
+.theme-dark .grn-toggle-more:hover {
   color: var(--tertiary);
 }
 .grouped-recent-notes .meta {
@@ -282,9 +289,6 @@ export function GroupedRecentNotes(userOpts) {
   color: var(--secondary);
   text-decoration: none;
   font-size: 0.88rem;
-}
-.grn-toggle-more:hover {
-  color: var(--tertiary);
 }
   `;
 
