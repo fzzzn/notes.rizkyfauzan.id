@@ -118,14 +118,8 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@playwright/test": "^1.60.0",
-    "@quartz-community/types": "github:quartz-community/types",
-    "@quartz-community/utils": "github:quartz-community/utils",
-=======
     "@quartz-community/types": "^1.0.0",
     "@quartz-community/utils": "^1.0.1",
->>>>>>> 97a2d05f80c4c50534959b1d0d41cc4b3895625e
     "@types/hast": "^3.0.4",
     "@types/node": "^26.5.1",
     "@types/pretty-time": "^1.1.5",
