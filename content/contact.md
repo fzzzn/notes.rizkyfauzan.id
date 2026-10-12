@@ -1,7 +1,6 @@
 ---
 title: Contact
 ---
-
 - Email: [contact@rizkyfauzan.id](mailto:contact@rizkyfauzan.id)
 - LinkedIn: [Rizky Fauzan Hanif](https://www.linkedin.com/in/rizky-fauzan-hanif/)
 - X (formerly Twitter): [@rizkyfauzanid](https://x.com/rizkyfauzanid)
@@ -10,4 +9,3 @@ title: Contact
 - Discord: [fzzzn_](https://discordapp.com/users/536379400686665778)
 - Telegram: [@rizkyfauzanid](https://t.me/rizkyfauzanid)
 
-[🏠 Back to Home](/)

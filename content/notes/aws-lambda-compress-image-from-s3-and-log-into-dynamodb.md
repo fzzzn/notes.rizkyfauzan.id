@@ -2,7 +2,6 @@
 title: AWS Lambda Compress Image from S3 and Log into DynamoDB
 date: 2026-03-17
 ---
-
 ## Overview
 In this note, we will explore how to use AWS Lambda to compress images stored in Amazon S3 and log the details of the operation into DynamoDB. This is a common use case for optimizing storage and improving performance when serving images.
 

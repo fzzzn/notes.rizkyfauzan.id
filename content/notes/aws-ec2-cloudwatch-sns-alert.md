@@ -2,7 +2,6 @@
 title: AWS EC2 CloudWatch SNS Alert
 date: 2026-03-16
 ---
-
 ## Create an SNS Topic
 
 Before CloudWatch can send an alert, it needs a "Topic" to send it to.
