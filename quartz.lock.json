@@ -193,12 +193,6 @@
       "commit": "d60d69165affdcaa25001194d5790e3e9d1559d0",
       "installedAt": "2026-10-12T04:45:59.999Z"
     },
-    "recent-notes": {
-      "source": "github:quartz-community/recent-notes",
-      "resolved": "https://github.com/quartz-community/recent-notes.git",
-      "commit": "28229202d481d5a41dc38e57ce320c561d20d0e8",
-      "installedAt": "2026-10-12T04:46:00.995Z"
-    },
     "remove-draft": {
       "source": "github:quartz-community/remove-draft",
       "resolved": "https://github.com/quartz-community/remove-draft.git",
