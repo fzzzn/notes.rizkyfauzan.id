@@ -7,7 +7,6 @@ tags:
   - networking
 draft: false
 ---
-
 # Seleksi ITNSA SMKN 2 Depok Sleman
 
 ![Seleksi ITNSA SMKN 2 Depok Sleman](https://images.unsplash.com/photo-1548544027-1a96c4c24c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzOHx8bmV0d29ya3xlbnwwfHx8fDE3MDg4MTgyMTZ8MA&ixlib=rb-4.0.3&q=80&w=960)

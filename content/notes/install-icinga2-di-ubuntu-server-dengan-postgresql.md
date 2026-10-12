@@ -8,7 +8,6 @@ tags:
   - monitoring
 draft: false
 ---
-
 # Install icinga2 di Ubuntu server dengan Postgresql
 
 ![Install icinga2 di Ubuntu server dengan Postgresql](https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHNlcnZlcnxlbnwwfHx8fDE3MTIzNzQ0MDV8MA&ixlib=rb-4.0.3&q=80&w=960)

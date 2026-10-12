@@ -1,7 +1,6 @@
 ---
 title: Contact
 ---
-
 - Email: [contact@rizkyfauzan.id](mailto:contact@rizkyfauzan.id)
 - LinkedIn: [Rizky Fauzan Hanif](https://www.linkedin.com/in/rizky-fauzan-hanif/)
 - X (formerly Twitter): [@rizkyfauzanid](https://x.com/rizkyfauzanid)

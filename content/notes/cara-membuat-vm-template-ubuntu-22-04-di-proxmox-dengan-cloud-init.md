@@ -8,7 +8,6 @@ tags:
   - virtualization
 draft: false
 ---
-
 # Cara Membuat VM Template Ubuntu 22.04 di Proxmox Dengan Cloud Init
 
 ![Cara Membuat VM Template Ubuntu 22.04 di Proxmox Dengan Cloud Init](https://images.unsplash.com/photo-1629654291663-b91ad427698f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHVidW50dXxlbnwwfHx8fDE3MTMzMjc5MjJ8MA&ixlib=rb-4.0.3&q=80&w=960)

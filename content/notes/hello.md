@@ -5,7 +5,6 @@ tags:
   - personal
 draft: false
 ---
-
 # Hello!
 
 Sebuah awal yang baru.

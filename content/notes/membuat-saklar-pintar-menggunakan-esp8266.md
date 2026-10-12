@@ -2,7 +2,6 @@
 title: Membuat Saklar Pintar Menggunakan ESP8266 dan Sinric Pro
 date: 2023-09-03
 ---
-
 Tulisan ini dibuat untuk laporan ujian praktek mata pelajaran IPS dan IPA.
 
 Saya membuat sebuah saklar pintar berbasis [_Internet of Things (IoT)_](https://en.wikipedia.org/wiki/Internet_of_things). Saklar ini dapat dikontrol dari jarak jauh menggunakan aplikasi atau website dengan bantuan koneksi internet.
