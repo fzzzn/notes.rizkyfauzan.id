@@ -1,13 +1,35 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Match rizkyfauzan.id: monochrome palette, Inter, inverted selection.
 
-/* Global link hover color */
-.theme-light {
-  --link-hover: #4a90d9;
+:root {
+  --link-hover: var(--dark);
 }
-.theme-dark {
-  --link-hover: #4a90d9;
+
+::selection {
+  background: var(--dark);
+  color: var(--light);
+}
+
+/* Links stay black/white now, so hover needs a non-color cue */
+article a:not([role="anchor"]):hover {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Wordmark weight/tracking like the main site's header */
+.page-title a {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: -0.02em;
 }
 
 /* Table of Contents hover effect */

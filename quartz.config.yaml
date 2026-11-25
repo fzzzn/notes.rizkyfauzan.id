@@ -18,30 +18,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
-      code: IBM Plex Mono
+      header: Inter
+      body: Inter
+      code: JetBrains Mono
     colors:
       lightMode:
-        light: "#faf8f8"
+        light: "#ffffff"
         lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#2b2b2b"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        gray: "#b3b3b3"
+        darkgray: "#333333"
+        dark: "#000000"
+        secondary: "#000000"
+        tertiary: "#000000"
+        highlight: rgba(0, 0, 0, 0.05)
+        textHighlight: rgba(0, 0, 0, 0.10)
       darkMode:
-        light: "#000000"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#a1a1a6"
-        dark: "#ebebec"
-        secondary: "#f5f5f7"
-        tertiary: "#a1a1a1"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0a0a0a"
+        lightgray: "#2a2a2a"
+        gray: "#4d4d4d"
+        darkgray: "#d4d4d4"
+        dark: "#f5f5f5"
+        secondary: "#f5f5f5"
+        tertiary: "#f5f5f5"
+        highlight: rgba(255, 255, 255, 0.08)
+        textHighlight: rgba(255, 255, 255, 0.15)
 plugins:
   - source: github:quartz-community/created-modified-date
     enabled: true
