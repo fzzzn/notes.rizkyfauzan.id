@@ -1,6 +1,7 @@
 ---
 title: Membuat Saklar Pintar Menggunakan ESP8266 dan Sinric Pro
 date: 2023-09-03
+description: "Membuat saklar pintar berbasis ESP8266 dan Sinric Pro untuk kontrol perangkat dari jarak jauh."
 ---
 Tulisan ini dibuat untuk laporan ujian praktek mata pelajaran IPS dan IPA.
 

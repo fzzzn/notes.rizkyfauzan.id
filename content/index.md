@@ -1,10 +1,11 @@
 ---
-title: Welcome to Digital Garden
+title: Welcome
+description: Technical notes on networking, Linux, cloud, and IoT by Rizky Fauzan Hanif.
+quartz-properties: false
 ---
-Pelajari lebih lanjut tentang [Digital Garden](https://maggieappleton.com/garden-history)
+Technical notes on networking, Linux, cloud, and IoT — mostly written for future me.
 
-## More About Me
+Learn more about [Digital Garden](https://maggieappleton.com/garden-history).
 
+- [All notes](/notes)
 - [Contact](/contact)
-- [Now](/now)
-

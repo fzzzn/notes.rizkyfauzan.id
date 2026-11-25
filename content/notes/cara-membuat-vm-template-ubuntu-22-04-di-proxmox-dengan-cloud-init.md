@@ -1,6 +1,7 @@
 ---
 title: "Cara Membuat VM Template Ubuntu 22.04 di Proxmox Dengan Cloud Init"
 date: 2024-04-17
+description: "Langkah membuat VM template Ubuntu 22.04 di Proxmox dengan cloud-init."
 tags:
   - proxmox
   - ubuntu

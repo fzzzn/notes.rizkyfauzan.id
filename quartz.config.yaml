@@ -219,21 +219,14 @@ plugins:
         GitHub: https://github.com/fzzzn/rizkyfauzan.id
         LinkedIn: https://linkedin.com/in/rizky-fauzan-hanif
         Status: https://status.rizkyfauzan.id
+        Tags: /tags/
   - source: ./plugins/grouped-recent-notes
     enabled: true
     options:
       groups:
-        - title: "ls -lah /home/fauzan/"
-          filterPrefix: ""
-          limit: 5
-          showTags: true
         - title: "ls -lah /var/notes/"
           filterPrefix: "notes/"
-          limit: 3
-          showTags: true
-        - title: "ls -lah /var/log/fauzan/"
-          filterPrefix: "log/"
-          limit: 3
+          limit: 5
           showTags: true
     layout:
       position: left

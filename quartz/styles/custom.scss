@@ -11,10 +11,15 @@
   color: var(--light);
 }
 
-/* Links stay black/white now, so hover needs a non-color cue */
-article a:not([role="anchor"]):hover {
+/* Monochrome links need a non-color cue to stay distinguishable */
+article a:not([role="anchor"]) {
   text-decoration: underline;
+  text-decoration-color: var(--gray);
   text-underline-offset: 0.15em;
+
+  &:hover {
+    text-decoration-color: currentColor;
+  }
 }
 
 /* Wordmark weight/tracking like the main site's header */
