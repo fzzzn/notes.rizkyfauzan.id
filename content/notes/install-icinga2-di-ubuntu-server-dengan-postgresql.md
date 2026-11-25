@@ -2,6 +2,7 @@
 title: "Install Icinga2 di Ubuntu Server dengan PostgreSQL"
 date: 2024-04-06
 description: "Install dan konfigurasi Icinga2 dengan PostgreSQL di Ubuntu Server."
+lang: id
 tags:
   - icinga2
   - ubuntu

@@ -2,6 +2,7 @@
 title: "Seleksi ITNSA SMKN 2 Depok Sleman"
 date: 2024-04-06
 description: "Catatan seleksi ITNSA SMKN 2 Depok Sleman: topologi, services, dan konfigurasi router."
+lang: id
 tags:
   - itnsa
   - smk

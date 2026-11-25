@@ -1,5 +1,11 @@
 import { i18n } from "../i18n"
-import { FullSlug, getFileExtension, joinSegments, pathToRoot } from "../util/path"
+import {
+  FullSlug,
+  getFileExtension,
+  joinSegments,
+  pathToRoot,
+  simplifySlug,
+} from "../util/path"
 import { CSSResourceToStyleElement, JSResourceToScriptElement } from "../util/resources"
 import { googleFontHref, googleFontSubsetHref } from "../util/theme"
 import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
@@ -11,13 +17,22 @@ export default (() => {
     externalResources,
     ctx,
   }: QuartzComponentProps) => {
+    const slug = fileData.slug!
     const titleSuffix = cfg.pageTitleSuffix ?? ""
     const title =
       (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+
+    const listingDescription = slug.startsWith("tags/")
+      ? slug === "tags/index"
+        ? `All tags on ${cfg.pageTitle}.`
+        : `Notes tagged ${slug.slice("tags/".length)}.`
+      : slug !== "index" && slug.endsWith("/index")
+        ? `Notes filed under ${slug.slice(0, -"/index".length)}.`
+        : i18n(cfg.locale).propertyDefaults.description
     const description =
       fileData.frontmatter?.socialDescription ??
       fileData.frontmatter?.description ??
-      unescapeHTML(fileData.description?.trim() ?? i18n(cfg.locale).propertyDefaults.description)
+      unescapeHTML(fileData.description?.trim() || listingDescription)
 
     const { css, js, additionalHead } = externalResources
 
@@ -26,9 +41,18 @@ export default (() => {
     const baseDir = fileData.slug === "404" ? path : pathToRoot(fileData.slug!)
     const iconPath = joinSegments(baseDir, "static/icon.png")
 
-    // Url of current page
-    const socialUrl =
-      fileData.slug === "404" ? url.toString() : joinSegments(url.toString(), fileData.slug!)
+    const isArticle =
+      slug !== "index" && slug !== "404" && !slug.startsWith("tags/") && !slug.endsWith("/index")
+
+    // Canonical URL: strip /index and add the trailing slash for folder pages
+    // so /notes/index and /notes/ do not compete as separate pages.
+    const simpleSlug = simplifySlug(slug).replace(/\/+$/, "")
+    const canonicalUrl =
+      slug === "404"
+        ? undefined
+        : simpleSlug === ""
+          ? `${url.origin}/`
+          : `${url.origin}/${simpleSlug}${slug.endsWith("/index") ? "/" : ""}`
 
     const usesCustomOgImage = ctx.cfg.plugins.emitters.some((e) => e.name === "CustomOgImages")
     const ogImageDefaultPath = `https://${cfg.baseUrl}/static/og-image.png`
@@ -59,9 +83,13 @@ export default (() => {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossOrigin="anonymous" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+        {cfg.baseUrl && canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+        {slug === "404" && <meta name="robots" content="noindex" />}
+        <meta name="author" content="Rizky Fauzan Hanif" />
+
         <meta name="og:site_name" content={cfg.pageTitle}></meta>
         <meta property="og:title" content={title} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content={isArticle ? "article" : "website"} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
@@ -80,11 +108,34 @@ export default (() => {
           </>
         )}
 
-        {cfg.baseUrl && (
+        {cfg.baseUrl && canonicalUrl && (
           <>
             <meta property="twitter:domain" content={cfg.baseUrl}></meta>
-            <meta property="og:url" content={socialUrl}></meta>
-            <meta property="twitter:url" content={socialUrl}></meta>
+            <meta property="og:url" content={canonicalUrl}></meta>
+            <meta property="twitter:url" content={canonicalUrl}></meta>
+          </>
+        )}
+
+        {isArticle && fileData.dates?.created && (
+          <meta property="article:published_time" content={fileData.dates.created.toISOString()} />
+        )}
+        {isArticle && fileData.dates?.modified && (
+          <meta property="article:modified_time" content={fileData.dates.modified.toISOString()} />
+        )}
+
+        {cfg.baseUrl && (
+          <>
+            <link
+              rel="alternate"
+              type="application/rss+xml"
+              title={cfg.pageTitle}
+              href={`https://${cfg.baseUrl}/index.xml`}
+            />
+            <link
+              rel="sitemap"
+              type="application/xml"
+              href={`https://${cfg.baseUrl}/sitemap.xml`}
+            />
           </>
         )}
 

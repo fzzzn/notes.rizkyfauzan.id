@@ -2,6 +2,7 @@
 title: "Hello!"
 date: 2026-05-30
 description: "Catatan pembuka: alasan pindah dari Ghost ke Quartz v5 dan rencana isi website ini."
+lang: id
 tags:
   - personal
 draft: false
