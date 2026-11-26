@@ -22,10 +22,16 @@ article a:not([role="anchor"]) {
   }
 }
 
-/* Wordmark weight/tracking like the main site's header */
+/* Uppercase wordmark like the main site's header */
 .page-title a {
   font-weight: 800;
   letter-spacing: -0.03em;
+}
+
+/* Listing dates are dimmed by the plugins to 0.6 opacity, below AA contrast */
+ul.section-ul li.section-li .section p.meta,
+.grouped-recent-notes p.meta {
+  opacity: 0.8;
 }
 
 h1,

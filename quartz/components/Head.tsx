@@ -19,8 +19,11 @@ export default (() => {
   }: QuartzComponentProps) => {
     const slug = fileData.slug!
     const titleSuffix = cfg.pageTitleSuffix ?? ""
-    const title =
-      (fileData.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title) + titleSuffix
+    const pageTitle =
+      fileData.frontmatter?.seoTitle ??
+      fileData.frontmatter?.title ??
+      i18n(cfg.locale).propertyDefaults.title
+    const title = pageTitle + titleSuffix
 
     const listingDescription = slug.startsWith("tags/")
       ? slug === "tags/index"
@@ -87,7 +90,7 @@ export default (() => {
         {slug === "404" && <meta name="robots" content="noindex" />}
         <meta name="author" content="Rizky Fauzan Hanif" />
 
-        <meta name="og:site_name" content={cfg.pageTitle}></meta>
+        <meta property="og:site_name" content={cfg.pageTitle}></meta>
         <meta property="og:title" content={title} />
         <meta property="og:type" content={isArticle ? "article" : "website"} />
         <meta name="twitter:card" content="summary_large_image" />
@@ -121,6 +124,30 @@ export default (() => {
         )}
         {isArticle && fileData.dates?.modified && (
           <meta property="article:modified_time" content={fileData.dates.modified.toISOString()} />
+        )}
+
+        {isArticle && canonicalUrl && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                headline: fileData.frontmatter?.title,
+                description,
+                datePublished: fileData.dates?.created?.toISOString(),
+                dateModified: fileData.dates?.modified?.toISOString(),
+                inLanguage: fileData.frontmatter?.lang ?? cfg.locale,
+                author: {
+                  "@type": "Person",
+                  name: "Rizky Fauzan Hanif",
+                  url: "https://rizkyfauzan.id",
+                },
+                mainEntityOfPage: canonicalUrl,
+                image: `https://${cfg.baseUrl}/static/og-image.png`,
+              }).replace(/</g, "\\u003c"),
+            }}
+          />
         )}
 
         {cfg.baseUrl && (

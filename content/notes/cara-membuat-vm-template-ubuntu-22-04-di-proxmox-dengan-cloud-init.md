@@ -12,7 +12,7 @@ draft: false
 ---
 # Cara Membuat VM Template Ubuntu 22.04 di Proxmox Dengan Cloud Init
 
-![Cara Membuat VM Template Ubuntu 22.04 di Proxmox Dengan Cloud Init](https://images.unsplash.com/photo-1629654291663-b91ad427698f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHVidW50dXxlbnwwfHx8fDE3MTMzMjc5MjJ8MA&ixlib=rb-4.0.3&q=80&w=960)
+![Cara Membuat VM Template Ubuntu 22.04 di Proxmox Dengan Cloud Init](/images/proxmox-cloud-init-cover.webp)
 
 SSH ke pve dengan user root
 
@@ -43,7 +43,7 @@ Install qemu-agent di image
     
     virt-customize -a jammy-server-cloudimg-amd64.img --install qemu-guest-agent --truncate /etc/machine-id
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-1.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-1.webp)
 
 Resize image
     
@@ -52,35 +52,35 @@ Resize image
 
 Buat VM baru di proxmox
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-2.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-2.webp)
 
 Pilih do not use any media
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-3.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-3.webp)
 
 Centang qemu agent
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-4.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-4.webp)
 
 Hapus semua disk yang ada
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-5.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-5.webp)
 
 Setting CPU
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-6.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-6.webp)
 
 Setting memory
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-7.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-7.webp)
 
 Setting network
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-8.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-8.webp)
 
 Confirm
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-9.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-9.webp)
 
 Import disk ke vm yang telah dibuat
     
@@ -89,40 +89,40 @@ Import disk ke vm yang telah dibuat
 
 Masuk ke VM hardware
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-10.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-10.webp)
 
 Klik 2x pada Unused Disk 0 lalu klik Add
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-11.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-11.webp)
 
 Masuk ke VM options lalu klik 2x pada Boot Order
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-12.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-12.webp)
 
 Naikkan scsi0 ke paling atas dan dicentang lalu klik OK
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-13.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-13.webp)
 
 Masuk ke VM Hardware klik add lalu pilih Cloudinit Drive
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-14.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-14.webp)
 
 Konfigurasi sebagai berikut lalu klik Add
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-15.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-15.webp)
 
 Klik kanan pada VM lalu klik Convert to template
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-16.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-16.webp)
 
 Klik YES
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-17.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-17.webp)
 
 Klik kanan pada VM lalu klik Clone
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-18.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-18.webp)
 
 Beri nama dan pilih full clone lalu klik Clone
 
-![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-19.png)
+![](/images/blog-cara-membuat-vm-template-ubuntu-22-04-di-proxmox-dengan-cloud-init-19.webp)

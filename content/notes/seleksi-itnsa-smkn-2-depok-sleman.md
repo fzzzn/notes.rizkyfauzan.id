@@ -11,9 +11,9 @@ draft: false
 ---
 # Seleksi ITNSA SMKN 2 Depok Sleman
 
-![Seleksi ITNSA SMKN 2 Depok Sleman](https://images.unsplash.com/photo-1548544027-1a96c4c24c7a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDEzOHx8bmV0d29ya3xlbnwwfHx8fDE3MDg4MTgyMTZ8MA&ixlib=rb-4.0.3&q=80&w=960)
+![Seleksi ITNSA SMKN 2 Depok Sleman](/images/itnsa-cover.webp)
 
-![Topologi Jaringan](/images/blog-seleksi-itnsa-smkn-2-depok-sleman-1.png)![Services](/images/blog-seleksi-itnsa-smkn-2-depok-sleman-2.png)![Address](/images/blog-seleksi-itnsa-smkn-2-depok-sleman-3.png)
+![Topologi Jaringan](/images/blog-seleksi-itnsa-smkn-2-depok-sleman-1.webp)![Services](/images/blog-seleksi-itnsa-smkn-2-depok-sleman-2.webp)![Address](/images/blog-seleksi-itnsa-smkn-2-depok-sleman-3.webp)
 
 📄 [Download Soal Client Server V2 (PDF, 1.1 MB)](/files/soal-client-server-v2.pdf)
 

@@ -2,6 +2,10 @@
 title: AWS EC2 CloudWatch SNS Alert
 date: 2026-03-16
 description: "Create a CloudWatch alarm for EC2 CPU utilization and send alerts via SNS email."
+tags:
+  - aws
+  - cloudwatch
+  - sns
 ---
 ## Create an SNS Topic
 

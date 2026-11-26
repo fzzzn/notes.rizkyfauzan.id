@@ -11,7 +11,7 @@ draft: false
 
 Sebuah awal yang baru.
 
-![Hello!](https://images.unsplash.com/photo-1500576992153-0271099def59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fGhlbGxvfGVufDB8fHx8MTY5Mzc0NDU3MHww&ixlib=rb-4.0.3&q=80&w=960)
+![Hello!](/images/hello-cover.webp)
 
 Ini adalah website baru untuk menggantikan website sebelumnya yang menggunakan [Hugo](https://gohugo.io/). Karena website sebelumnya bermasalah dengan SEO dan sulit untuk di index Google, jadi saya memutuskan untuk menggantinya dengan [Ghost](https://ghost.org/).
 

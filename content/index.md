@@ -1,5 +1,6 @@
 ---
 title: Welcome
+seoTitle: Notes on networking, Linux, cloud, and IoT
 description: Technical notes on networking, Linux, cloud, and IoT by Rizky Fauzan Hanif.
 quartz-properties: false
 ---
